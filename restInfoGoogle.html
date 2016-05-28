@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>restInfo</title>
+</head>
+<style>
+	/* ---- reset ---- */
+
+	body {
+	  margin: 0;
+	  font:normal 75% Arial, Helvetica, sans-serif;
+	}
+
+	canvas {
+	  display: block;
+	  vertical-align: bottom;
+	}
+
+	/* ---- particles.js container ---- */
+
+	#particles-js {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background-color: #282f34;
+	  background-image: url("");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  background-position: 50% 50%;
+	}
+
+	/* ---- stats.js ---- */
+
+	.count-particles{
+	  background: #000022;
+	  position: absolute;
+	  top: 48px;
+	  left: 0;
+	  width: 80px;
+	  color: #13E8E9;
+	  font-size: .8em;
+	  text-align: left;
+	  text-indent: 4px;
+	  line-height: 14px;
+	  padding-bottom: 2px;
+	  font-family: Helvetica, Arial, sans-serif;
+	  font-weight: bold;
+	}
+
+	.js-count-particles{
+	  font-size: 1.1em;
+	}
+
+	#stats,
+	.count-particles{
+	  -webkit-user-select: none;
+	  margin-top: 5px;
+	  margin-left: 5px;
+	}
+
+	#stats{
+	  border-radius: 3px 3px 0 0;
+	  overflow: hidden;
+	}
+
+	.count-particles{
+	  border-radius: 0 0 3px 3px;
+	}
+</style>	
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<body>
+	 	
+	
+	<!-- <img class = "stickLogo" src="images/logo-2.png" alt=""> -->
+	
+	<div class = "window restInfo">
+		<div class='bar'>
+			Complete the rest
+		</div>
+		<div class="form">
+			<div class="inputF">
+				<input type="text" value="Jason">
+			</div>
+			<div class="inputL">
+				<input type="text" value="Sheng">
+				<p>*</p>
+			</div>
+			<div style="clear:both"></div>
+			<div class="input" id="email">
+				<input type="text" placeholder="Email" required>
+				<p>*</p>
+			</div>
+			<div class="input">
+				<input type="text" placeholder="Anonymous Username" >
+			</div>
+			<div class="optional">
+				optional
+				<div class="questionMark">
+					<img src="images/questionMark-01.png" alt="questionMark">
+				</div>
+				<div class='bubble zaa'>
+					There are some webpages where you may not want to disclose your real identity, such as a health forum. You can use your anonymous username on any webpage you want, though we encourage real identity. Easily switch between real and anonymous identity with a click of a button!
+				</div>
+			</div>
+			
+			<a href='interest.html'><div class="next enjoy">Enjoy</div></a>
+			<p class="mark">* field is required</p>
+		</div>
+	</div>
+
+	<!-- indentity -->
+
+	<!-- <div class = "window identity">
+		<div class='bar'>
+			Use real identity for now?
+		</div>
+		<div class="form">
+			<div class="inputF">
+				<div class='check checkboxy active'>Yes</div>
+			</div>
+			<div class="inputL">
+				<div class='check checkboxn'>No</div>
+			</div>
+			<div style="clear:both"></div>
+			<div class="input" id = "nickname">
+				<input  type="text" placeholder="Enter your anonymous name..">
+			</div>
+			
+			<a href="interest.html"><div class="next enjoy">Ok</div></a>
+			<p>(You can switch in between later)</p>
+		</div>
+	</div> -->
+
+	<!-- particles.js container -->
+	<div id="particles-js"></div>
+	
+
+
+	<!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
+</body>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</script>
+<script>
+	/* ---- particles.js config ---- */
+
+	particlesJS("particles-js", {
+	  "particles": {
+	    "number": {
+	      "value": 80,
+	      "density": {
+	        "enable": true,
+	        "value_area": 800
+	      }
+	    },
+	    "color": {
+	      "value": "#ffffff"
+	    },
+	    "shape": {
+	      "type": "circle",
+	      "stroke": {
+	        "width": 0,
+	        "color": "#000000",
+
+	      },
+	      "polygon": {
+	        "nb_sides": 11
+	      }
+	    },
+	    "opacity": {
+	      "value": 0.1,
+	      "random": false,
+	      "anim": {
+	        "enable": false,
+	        "speed": 1,
+	        "opacity_min": 0.1,
+	        "sync": false
+	      }
+	    },
+	    "size": {
+	      "value": 3,
+	      "random": true,
+	      "anim": {
+	        "enable": false,
+	        "speed": 40,
+	        "size_min": 0.1,
+	        "sync": false
+	      }
+	    },
+	    "line_linked": {
+	      "enable": true,
+	      "distance": 150,
+	      "color": "#ffffff",
+	      "opacity": 0.2,
+	      "width": 1
+	    },
+	    "move": {
+	      "enable": true,
+	      "speed": 3,
+	      "direction": "none",
+	      "random": false,
+	      "straight": false,
+	      "out_mode": "out",
+	      "bounce": false,
+	      "attract": {
+	        "enable": false,
+	        "rotateX": 600,
+	        "rotateY": 1200
+	      }
+	    }
+	  },
+	  "interactivity": {
+	    "detect_on": "canvas",
+	    "events": {
+	      "onhover": {
+	        "enable": true,
+	        "mode": "grab"
+	      },
+	      "onclick": {
+	        "enable": true,
+	        "mode": "push"
+	      },
+	      "resize": true
+	    },
+	    "modes": {
+	      "grab": {
+	        "distance": 170,
+	        "line_linked": {
+	          "opacity": 1
+	        }
+	      },
+	      "bubble": {
+	        "distance": 400,
+	        "size": 40,
+	        "duration": 2,
+	        "opacity": 8,
+	        "speed": 3
+	      },
+	      "repulse": {
+	        "distance": 444,
+	        "duration": 0.4
+	      },
+	      "push": {
+	        "particles_nb": 4
+	      },
+	      "remove": {
+	        "particles_nb": 2
+	      }
+	    }
+	  },
+	  "retina_detect": true
+	});
+
+
+	/* ---- stats.js config ---- */
+
+	
+	
+	
+</script>
+  
+  <script src="js/min/restInfo.min.js"></script>
+
+</html>
